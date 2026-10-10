@@ -64,14 +64,20 @@ if __name__=="__main__":
             webbrowser.open("youtube.com")
 
         elif "open google" in query:
-            webbrowser.open("google.co.in")
+            webbrowser.open("google.com")
 
         elif 'play music' in query:
-            music_dir = 'E:\\songs\\panjabi song'
+            music_dir = 'D:\\song'
             songs = os.listdir(music_dir)
             #print(songs)
-            os.startfile(os.path.join(music_dir,songs[random.randint(1,25)]))
+            os.startfile(os.path.join(music_dir,songs[random.randint(1,2)]))
 
+        elif 'play baby song' in query:
+                    music_dir = 'D:\\song\\bubu'
+                    songs = os.listdir(music_dir)
+                    #print(songs)
+                    os.startfile(os.path.join(music_dir,songs[random.randint(1,2)]))
+        
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}")
